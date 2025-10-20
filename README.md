@@ -1,7 +1,7 @@
 # Rotation Curve Analysis of NGC 5526
 
 This project analyzes spectral data collected using the KAST optical spectrograph on the Shane 3-meter telescope at Lick Observatory to derive the rotation curve of the edge-on spiral galaxy NGC 5526.  
-Through calibration, wavelength mapping, and Doppler shift measurements of the H-alpha line, I modeled the galaxy’s rotational velocity profile and compared my findings with the classic results of Rubin & Ford (1970) — foundational evidence for dark matter.
+Through calibration, wavelength mapping, and Doppler shift measurements of the H-alpha line, I modeled the galaxy’s rotational velocity profile and compared my findings with the classic results of Rubin & Ford (1970).
 
 ---
 
@@ -40,18 +40,18 @@ The main steps included:
    - Subtracted master bias and normalized flat fields.
 
 2. **Spectral Calibration**  
-   - Used He/Hg-Cd/Ne lamp spectra to map pixel → wavelength.  
+   - Used He/Hg-Cd/Ne lamp spectra to map pixel values to wavelength.  
    - Derived a dispersion relation of **3.03 Å/pixel**.  
 
 3. **Spectrum Extraction**  
-   - Located galactic center (row ≈ 93) via Gaussian fitting.  
+   - Located galactic center via Gaussian fitting.  
    - Extracted 1D spectrum by median-collapsing around the center.  
    - Identified the **H-alpha emission line** at **6594 ± 0.12 Å**.
 
 4. **Velocity Determination**  
    - Calculated redshift: *z = 0.0047 ± 0.00002* (≈30% off from literature *z = 0.0067*).  
    - Fitted Gaussians across the slit to derive wavelength shifts.  
-   - Converted pixel offsets → arcseconds → kpc.  
+   - Converted pixel offsets to arcseconds to kpc.  
    - Applied Doppler formula to compute velocities per radius bin.
 
 5. **Rotation Curve Construction**  
@@ -83,24 +83,25 @@ Further improvement could come from:
 - Longer exposures or red-side spectroscopy.  
 - Inclusion of multiple emission lines for velocity cross-checking.  
 - Comparison with existing velocity maps from literature or SDSS data.
+- Extra observation nights to add more data points
 
 ---
 
 ##  Tools & Libraries
 
 - **Python**: Astropy, NumPy, Pandas, Matplotlib, Photutils, SciPy  
-- **Data Visualization**: Matplotlib, Seaborn  
+- **Data Visualization**: Matplotlib
 - **Modeling**: `scipy.optimize.curve_fit` for Gaussian fitting  
 
 ---
 
 ## Key Skills Demonstrated
 
+- Data visualization and scientific reporting in Python
 - CCD data calibration and noise correction  
 - Wavelength calibration and dispersion mapping  
 - Redshift and velocity derivation via Doppler shift  
-- Gaussian modeling and error propagation  
-- Data visualization and scientific reporting in Python  
+- Gaussian modeling and error propagation    
 
 ---
 
